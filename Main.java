@@ -4,13 +4,11 @@
  * Author: Farhan Khan 	   
  * Program Description:		   
  * Tester class for the Rectangle.java and Shape.java classes
- * The link below is a visual diagram of the tester class (sorry it's not animated😉)
- * https://jamboard.google.com/d/1Vojy059HaiiR3IP0OCkQwbfqZOHICdVVdbOaPWvOyao/edit?usp=sharing
  ***************************************/
 
 class Main {
     public static void main(String[] args) {
-
+                
         Rectangle r1 = new Rectangle(0,0,0,0);
         r1.set(0,0,6,6);
         Rectangle r2 = new Rectangle(20,20,20,15);
@@ -27,8 +25,23 @@ class Main {
         Rectangle r13 = new Rectangle(6,3,4,2);
         Rectangle r14 = new Rectangle(7,-5,6,8);
 
-        System.out.println("\n" + r1 
-        + "| Expected: base: (0,0) w:6 h:6\n");
+        //check areas
+        System.out.println("\nArea of r1: " + r1.area() 
+        + "| Expected 36\n");
+
+        System.out.println("Area of r2: " + r2.area() 
+        + "| Expected 300\n");
+
+        System.out.println("Area of r3: " + r3.area() 
+        + "| Expected 7\n");
+
+        System.out.println("Area of r4: " + r4.area() 
+        + "| Expected 10\n");
+
+        System.out.println("Area of r5: " + r5.area() 
+        + "| Expected 20\n");
+
+        System.out.println(r1 + "| Expected: base: (0,0) w:6 h:6\n");
 
         System.out.println(Rectangle.intersection(r1,r2) //check no intersection
         + " | Expected: base: (0,0) w:0 h:0 \n");
