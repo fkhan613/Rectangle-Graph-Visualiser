@@ -60,9 +60,7 @@ class Rectangle extends Shape {
         //calculate the lower positioned rectangle
         int bottomYDir = Math.min(r1.getBottom() + r1.height, r2.getBottom() + r2.height);
 
-        /*if there is overlap, then return a new rectangle - 
-         * representing the common area between them
-         * we use <= to also account for the rectangles -
+        /* we use <= to also account for the rectangles -
          * whos sides are touching but no direct overlap*/
         if(rML <= lML && topYDir <= bottomYDir){
             return new Rectangle(rML, topYDir, lML-rML, bottomYDir-topYDir);
@@ -78,7 +76,6 @@ class Rectangle extends Shape {
         if(r1.contains(r2)){return r1.perimeter();}
         if(r2.contains(r1)){return r2.perimeter();}
 
-        //declare a variable to hold the rectangle formed by the intersection
         Rectangle intersectedRect = intersection(r1, r2);
 
         //if the intersectedRect is only a line, subtract it twice
